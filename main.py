@@ -1,4 +1,6 @@
-from utils import Utils, Logger, YouTubeHandler
+from handlers.logger import Logger
+from handlers.utils import Utils
+from handlers.youtube import YouTubeHandler
 
 Utils.make_dir()
 
