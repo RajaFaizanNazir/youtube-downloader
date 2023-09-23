@@ -19,5 +19,6 @@ class YouTubeHandler:
             if verbose:
                 Logger.info("Downloading " + stream.title)
             stream.download(output_path=path)
+            return stream.title
         except:
             Logger.error("Error downloading video")
