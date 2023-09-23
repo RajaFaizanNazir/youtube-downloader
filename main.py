@@ -9,4 +9,4 @@ path = Utils.make_dir(title)
 for video in videos:
     Utils.download_video(path, video)
 
-Logger.info("Download Completed", Logger.GREEN)
+Logger.info("Download Completed", Logger.Color.GREEN)
