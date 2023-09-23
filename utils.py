@@ -24,19 +24,7 @@ class Logger:
         Logger.print_colored(message, color)
 
 
-class Utils:
-    OUTPUT_FOLDER = './DOWNLOADED'
-
-    @staticmethod
-    def make_dir(name=None):
-        if name is None:
-            name = Utils.OUTPUT_FOLDER
-        else:
-            name = Utils.OUTPUT_FOLDER + "/" + name.split()[0]
-        if not os.path.exists(name):
-            os.makedirs(name)
-        return name
-
+class YouTubeHandler:
     @staticmethod
     def get_playlist(url):
         try:
@@ -55,3 +43,17 @@ class Utils:
             stream.download(output_path=path)
         except:
             Logger.error("Error downloading video")
+
+
+class Utils:
+    OUTPUT_FOLDER = './DOWNLOADED'
+
+    @staticmethod
+    def make_dir(name=None):
+        if name is None:
+            name = Utils.OUTPUT_FOLDER
+        else:
+            name = Utils.OUTPUT_FOLDER + "/" + name.split()[0]
+        if not os.path.exists(name):
+            os.makedirs(name)
+        return name
